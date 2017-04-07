@@ -642,6 +642,14 @@
 // @match		http://piccloud.ru/full/
 // @match		http://piccloud.ru/*.html
 // @match		http://imgbase.ru/*/*/
+// @match               http://imgtaxi.com/img-*
+// @match               http://imgadult.com/img-*
+// @match               http://imgblank.com/img-*
+// @match               http://jav-hentai.host/t/img-*
+// @match               http://img-hentai.host/t/img-*
+// @match               http://star-hentai.com/t/img-*
+// @match               http://hentai-baka.com/t/img-*
+// @match               http://imgwallet.com/img-*
 // ==/UserScript==
 
 if (typeof unsafeWindow === "undefined")
@@ -1581,6 +1589,11 @@ function makeworld()
 	case "thumbnailus.com":
 	case "imgleveret.com":
 	case "porn84.org":
+	case 'imgblank.com':
+    	case 'jav-hentai.host':
+    	case 'img-hentai.host':
+    	case 'star-hentai.com':
+    	case 'hentai-baka.com':
 		i = q('input[type="submit"]');
 		dp=true;
 		if(i) 
@@ -1875,6 +1888,7 @@ function makeworld()
 		}
 	case "imgdrive.net":
 	case "imgtaxi.com":
+	case "imgwallet.com:
 		j = true;
 		i = q("a.overlay_ad_link");
 		if(i)
